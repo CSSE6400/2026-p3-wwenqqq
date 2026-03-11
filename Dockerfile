@@ -17,5 +17,5 @@ RUN pipx run poetry install --no-root
 # Copy application code
 COPY todo todo
 
-# Start command with delay to wait for database
-CMD ["bash", "-c", "sleep 10 && pipx run poetry run flask --app todo run --host 0.0.0.0 --port 6400"]
+# Start command
+CMD ["pipx", "run", "poetry", "run", "flask", "--app", "todo", "run", "--host", "0.0.0.0", "--port", "6400"]
